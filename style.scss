@@ -1,0 +1,75 @@
+// color variables
+
+$color-white: white;
+$color-black: black;
+$color-grey: grey;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: montserrat;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $color-black;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(5rem, 1fr));
+  grid-template-rows: minmax(20rem, auto) repeat(5, minmax(5rem, 1fr));
+
+  &__output {
+    grid-column: 1 / -1;
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    padding-right: 2rem;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    &--previous {
+      font-size: 2rem;
+      color: $color-grey;
+    }
+
+    &--current {
+      font-size: 4rem;
+    }
+  }
+
+  &__span-two {
+    grid-column: span 2;
+  }
+
+  &__btn {
+    border: 1px solid $color-white;
+    color: white;
+    font-family: inherit;
+    font-size: 2rem;
+    outline: none;
+    background-color: rgba($color-black, 0.1);
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+      background-color: rgba($color-white, 0.1);
+    }
+
+    &:active {
+      background-color: rgba($color-white, 0.5);
+    }
+  }
+}

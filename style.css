@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: montserrat;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(5rem, 1fr))[4];
+      grid-template-columns: repeat(4, minmax(5rem, 1fr));
+  -ms-grid-rows: minmax(20rem, auto) (minmax(5rem, 1fr))[5];
+      grid-template-rows: minmax(20rem, auto) repeat(5, minmax(5rem, 1fr));
+}
+
+.container__output {
+  grid-column: 1 / -1;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-right: 2rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.container__output--previous {
+  font-size: 2rem;
+  color: grey;
+}
+
+.container__output--current {
+  font-size: 4rem;
+}
+
+.container__span-two {
+  grid-column: span 2;
+}
+
+.container__btn {
+  border: 1px solid white;
+  color: white;
+  font-family: inherit;
+  font-size: 2rem;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.container__btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container__btn:active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/*# sourceMappingURL=style.css.map */
